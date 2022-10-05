@@ -16,9 +16,7 @@ class GameActivity : AppCompatActivity() {
 
     for (i in 0..5){
         val num = random()
-        Handler(Looper.getMainLooper()).postDelayed({
-            start()
-        }, num.toLong())
+        start()
 
     }
 
@@ -26,8 +24,7 @@ TODO("랜덤값으로 나온 시간이후 스탑하여 나온 시간 기록 만�
 
     }
     fun random(): Int {
-        val random = Random()
-        return random.nextInt(1000 - 6000)
+        return (1000..4000).random()
     }
     fun start(){
         thread(start=true) {
