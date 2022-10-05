@@ -5,6 +5,7 @@
       <map>
         <entry key="app/src/main/res/drawable/ic_rocket_312430.xml" value="0.1985" />
         <entry key="app/src/main/res/drawable/radius.xml" value="0.1985" />
+        <entry key="app/src/main/res/layout/activity_game.xml" value="0.297554347826087" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.297554347826087" />
       </map>
