@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        TODO("화면 넘기고 액티비티 삭제, 뒤로가도 안나오게")
+
 
         val startBtn = findViewById<Button>(R.id.startBtn)
         startBtn.setOnClickListener {

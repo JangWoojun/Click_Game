@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import kotlin.concurrent.thread
@@ -19,10 +20,9 @@ class GameActivity : AppCompatActivity() {
 
         val gameLayout = findViewById<ConstraintLayout>(R.id.gameLayout)
         val clickBtn = findViewById<Button>(R.id.clickBtn)
+        val count = findViewById<TextView>(R.id.count)
 
-        TODO("초록색으로 바뀌고 버튼 클릭하면 시간 뜨게 하고 다시 새 게임 준비")
-
-    for (i in 0..5){
+    for (i in 1..5){
         val num = randomNum()
         Handler(Looper.getMainLooper()).postDelayed({
             start()
@@ -31,7 +31,7 @@ class GameActivity : AppCompatActivity() {
 
             clickBtn.setOnClickListener {
                 stop()
-                Toast.makeText(this,total.toString(),Toast.LENGTH_SHORT).show()
+                count.text = "$i/5"
             }
         }, num.toLong())
 
@@ -57,5 +57,9 @@ class GameActivity : AppCompatActivity() {
     }
     fun stop(){
         started=false
+        val gameLayout = findViewById<ConstraintLayout>(R.id.gameLayout)
+        val clickBtn = findViewById<Button>(R.id.clickBtn)
+        gameLayout.setBackgroundColor(Color.parseColor("#FFEA7D"))
+        clickBtn.text = "Ready"
     }
 }
