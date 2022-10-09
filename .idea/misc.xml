@@ -3,10 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.22" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.22" />
+        <entry key="app/src/main/res/drawable/ic_lightning_7050271.xml" value="0.22" />
         <entry key="app/src/main/res/drawable/ic_rocket_312430.xml" value="0.1985" />
         <entry key="app/src/main/res/drawable/radius.xml" value="0.1985" />
+        <entry key="app/src/main/res/drawable/radius_background.xml" value="0.22" />
+        <entry key="app/src/main/res/drawable/radius_btn.xml" value="0.22" />
+        <entry key="app/src/main/res/drawable/radius_yellow.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_game.xml" value="0.297554347826087" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_score.xml" value="0.35190217391304346" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.297554347826087" />
       </map>
     </option>
