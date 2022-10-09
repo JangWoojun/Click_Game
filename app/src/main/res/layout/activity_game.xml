@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".GameActivity"
-    android:background="#FFEA7D"
+    android:background="#c0102a"
     android:id="@+id/gameLayout">
 
 
     <TextView
-        android:textColor="#FFEA7D"
+        android:textColor="#c0102a"
         android:textSize="34sp"
         android:textStyle="bold"
         android:text="000ms"
