@@ -61,5 +61,6 @@ class GameActivity : AppCompatActivity() {
         val clickBtn = findViewById<Button>(R.id.clickBtn)
         gameLayout.setBackgroundColor(Color.parseColor("#FFEA7D"))
         clickBtn.text = "Ready"
+        total = 0
     }
 }
