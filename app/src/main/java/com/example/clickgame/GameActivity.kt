@@ -28,33 +28,42 @@ class GameActivity : AppCompatActivity() {
         val count = findViewById<TextView>(R.id.count)
         val timeCheck = findViewById<TextView>(R.id.timeCheck)
 
+        val num = (500..5000).random()
 
-        for (i in 1..5){
-            val num = (500..5000).random()
+        var i = 1
+
+        Handler(Looper.getMainLooper()).postDelayed({
+
+            start()
+
+        }, num.toLong())
+
+        clickBtn.setOnClickListener {
+
+            stop(i)
+            i++
+
+            val num = (500..3500).random()
             Log.d(TAG,num.toString())
+
             Handler(Looper.getMainLooper()).postDelayed({
 
                 start()
-                gameLayout.setBackgroundColor(Color.parseColor("#90ee90"))
-                timeCheck.setTextColor(Color.parseColor("#90ee90"))
-                clickBtn.text = "Click"
-
-                clickBtn.setOnClickListener {
-                    stop()
-                    count.text = "$i/5"
-                    timeCheck.text = "${time}ms"
-                    timeCheck.setTextColor(Color.parseColor("#ffffff"))
-                    totalTime+=time
-                    time=0
-                }
 
             }, num.toLong())
         }
 
 
+
+
     }
 
     fun start(){
+
+        val gameLayout = findViewById<ConstraintLayout>(R.id.gameLayout)
+        val clickBtn = findViewById<Button>(R.id.clickBtn)
+        val timeCheck = findViewById<TextView>(R.id.timeCheck)
+
         started = true
         thread(start=true) {
 
@@ -66,14 +75,26 @@ class GameActivity : AppCompatActivity() {
             }
 
         }
-
+        gameLayout.setBackgroundColor(Color.parseColor("#90ee90"))
+        timeCheck.setTextColor(Color.parseColor("#90ee90"))
+        clickBtn.text = "Click"
     }
 
-    fun stop(){
-        started=false
+    fun stop(i:Int){
         val gameLayout = findViewById<ConstraintLayout>(R.id.gameLayout)
         val clickBtn = findViewById<Button>(R.id.clickBtn)
+        val count = findViewById<TextView>(R.id.count)
+        val timeCheck = findViewById<TextView>(R.id.timeCheck)
+
+        started=false
+
         gameLayout.setBackgroundColor(Color.parseColor("#FFEA7D"))
         clickBtn.text = "Ready"
+        count.text = "$i/5"
+        timeCheck.text = "${time}ms"
+        timeCheck.setTextColor(Color.parseColor("#ffffff"))
+        totalTime+=time
+        time=0
     }
+
 }
