@@ -1,5 +1,6 @@
 package com.example.clickgame
 
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -41,6 +42,11 @@ class GameActivity : AppCompatActivity() {
         }, num.toLong())
 
         clickBtn.setOnClickListener {
+
+            if(i==5){
+                val intent = Intent(this,MaxScoreActivity::class.java)
+                startActivity(intent)
+            }
 
             stop(i)
             i++
