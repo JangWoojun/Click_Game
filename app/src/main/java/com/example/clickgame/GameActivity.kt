@@ -45,6 +45,7 @@ class GameActivity : AppCompatActivity() {
 
             if(i==5){
                 val intent = Intent(this,MaxScoreActivity::class.java)
+                intent.putExtra("maxScore",totalTime.toString())
                 startActivity(intent)
             }
 
