@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MaxScoreActivity"
-    android:background="#a9cbd7">
+    android:background="#c0102a">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Your average response rate is"
+        android:text="Your response rate is"
         android:textColor="@color/white"
         android:textSize="29sp"
         android:textStyle="bold"
