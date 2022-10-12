@@ -43,6 +43,8 @@ class GameActivity : AppCompatActivity() {
                 val intent = Intent(this,MaxScoreActivity::class.java)
                 totalTime/=5
                 intent.putExtra("maxScore",totalTime.toString())
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 startActivity(intent)
             }
 
