@@ -20,6 +20,7 @@ class GameActivity : AppCompatActivity() {
     var started = false
 
     val TAG = "GameActivity"
+    private var backPressedTime : Long = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -112,6 +113,16 @@ class GameActivity : AppCompatActivity() {
         clickText.visibility = View.INVISIBLE
         totalTime+=time
         time=0
+    }
+
+    override fun onBackPressed() {
+
+        if (System.currentTimeMillis() - backPressedTime < 2000) {
+            finish()
+            return
+        }
+
+        backPressedTime = System.currentTimeMillis()
     }
 
 }
