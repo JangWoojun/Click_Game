@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.util.Log
+import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -24,10 +25,7 @@ class GameActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
 
-        val gameLayout = findViewById<ConstraintLayout>(R.id.gameLayout)
         val clickBtn = findViewById<Button>(R.id.clickBtn)
-        val count = findViewById<TextView>(R.id.count)
-        val timeCheck = findViewById<TextView>(R.id.timeCheck)
 
         val num = (500..5000).random()
 
@@ -71,6 +69,8 @@ class GameActivity : AppCompatActivity() {
         val gameLayout = findViewById<ConstraintLayout>(R.id.gameLayout)
         val clickBtn = findViewById<Button>(R.id.clickBtn)
         val timeCheck = findViewById<TextView>(R.id.timeCheck)
+        val waitText = findViewById<TextView>(R.id.waitText)
+        val clickText = findViewById<TextView>(R.id.clickText)
 
         started = true
         thread(start=true) {
@@ -83,8 +83,10 @@ class GameActivity : AppCompatActivity() {
             }
 
         }
-        gameLayout.setBackgroundColor(Color.parseColor("#90ee90"))
-        timeCheck.setTextColor(Color.parseColor("#90ee90"))
+        gameLayout.setBackgroundColor(Color.parseColor("#2dd12d"))
+        timeCheck.visibility = View.INVISIBLE
+        waitText.visibility = View.INVISIBLE
+        clickText.visibility = View.VISIBLE
         clickBtn.text = "Click"
     }
 
@@ -93,6 +95,9 @@ class GameActivity : AppCompatActivity() {
         val clickBtn = findViewById<Button>(R.id.clickBtn)
         val count = findViewById<TextView>(R.id.count)
         val timeCheck = findViewById<TextView>(R.id.timeCheck)
+        val waitText = findViewById<TextView>(R.id.waitText)
+        val clickText = findViewById<TextView>(R.id.clickText)
+
 
         started=false
 
@@ -100,7 +105,9 @@ class GameActivity : AppCompatActivity() {
         clickBtn.text = "Ready"
         count.text = "$i/5"
         timeCheck.text = "${time}ms"
-        timeCheck.setTextColor(Color.parseColor("#ffffff"))
+        timeCheck.visibility = View.VISIBLE
+        waitText.visibility = View.VISIBLE
+        clickText.visibility = View.INVISIBLE
         totalTime+=time
         time=0
     }
