@@ -29,8 +29,6 @@ class GameActivity : AppCompatActivity() {
         val count = findViewById<TextView>(R.id.count)
         val timeCheck = findViewById<TextView>(R.id.timeCheck)
 
-        //TODO("버튼 누르면 스코어 화면으로 이동,i가 5가 넘으면 maxScore로 이동하여 점수보여주기 구현")
-
         val num = (500..5000).random()
 
         var i = 1
@@ -45,6 +43,7 @@ class GameActivity : AppCompatActivity() {
 
             if(i==5){
                 val intent = Intent(this,MaxScoreActivity::class.java)
+                totalTime/=5
                 intent.putExtra("maxScore",totalTime.toString())
                 startActivity(intent)
             }
@@ -97,7 +96,7 @@ class GameActivity : AppCompatActivity() {
 
         started=false
 
-        gameLayout.setBackgroundColor(Color.parseColor("#FFEA7D"))
+        gameLayout.setBackgroundColor(Color.parseColor("#c0102a"))
         clickBtn.text = "Ready"
         count.text = "$i/5"
         timeCheck.text = "${time}ms"
