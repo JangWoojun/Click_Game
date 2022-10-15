@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Click Game</string>
+    <string name="title">reaction speed \n test</string>
+    <string name="main_SolidBtn">Start</string>
+    <string name="main_GhostBtn">Ranking</string>
+    <string name="maxScore_ScoreGuidance">Your response rate is</string>
+    <string name="exScore">000ms</string>
+    <string name="game_btnReadyState">ready</string>
+    <string name="game_count">0/5</string>
+    <string name="game_speedCheck">000ms</string>
+    <string name="game_guidance">Wait for the green</string>
+    <string name="game_start_guidance">Click!</string>
+    <string name="splash_Phrase">Test your reaction rate!</string>
+    <string name="intro_image">intro_image</string>
 </resources>
