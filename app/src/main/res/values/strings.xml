@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Click Game</string>
-    <string name="title">reaction speed \n test</string>
+    <string name="title">reaction\nspeed test</string>
     <string name="main_SolidBtn">Start</string>
     <string name="main_GhostBtn">Ranking</string>
     <string name="maxScore_ScoreGuidance">Your response rate is</string>
@@ -19,4 +19,5 @@
     <string name="Soon1">Too Soon!</string>
     <string name="Soon2">Click to Reset</string>
     <string name="Reset">Reset</string>
+    <string name="Restart">Restart</string>
 </resources>
