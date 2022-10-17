@@ -15,9 +15,11 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import kotlin.concurrent.thread
 
 class GameActivity : AppCompatActivity() {
-    var time = 0
-    var totalTime = 0
-    var started = false
+    private var time = 0
+    private var totalTime = 0
+    private var started = false
+    private var chk = false
+
 
     val TAG = "GameActivity"
     private var backPressedTime : Long = 0
@@ -39,31 +41,31 @@ class GameActivity : AppCompatActivity() {
         }, num.toLong())
 
         clickBtn.setOnClickListener {
+            if (chk){
+                if(i==5){
+                    val intent = Intent(this,MaxScoreActivity::class.java)
+                    totalTime/=5
+                    intent.putExtra("maxScore",totalTime.toString())
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                    startActivity(intent)
+                }
 
-            if(i==5){
-                val intent = Intent(this,MaxScoreActivity::class.java)
-                totalTime/=5
-                intent.putExtra("maxScore",totalTime.toString())
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                startActivity(intent)
+                stop(i)
+                i++
+
+                chk =false
+
+                val num = (500..3500).random()
+                Log.d(TAG,num.toString())
+
+                Handler(Looper.getMainLooper()).postDelayed({
+
+                    start()
+
+                }, num.toLong())
             }
-
-            stop(i)
-            i++
-
-            val num = (500..3500).random()
-            Log.d(TAG,num.toString())
-
-            Handler(Looper.getMainLooper()).postDelayed({
-
-                start()
-
-            }, num.toLong())
         }
-
-
-
 
     }
 
@@ -74,7 +76,7 @@ class GameActivity : AppCompatActivity() {
         val timeCheck = findViewById<TextView>(R.id.timeCheck)
         val waitText = findViewById<TextView>(R.id.waitText)
         val clickText = findViewById<TextView>(R.id.clickText)
-
+        chk = true
         started = true
         thread(start=true) {
 
