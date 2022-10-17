@@ -14,19 +14,19 @@
         android:gravity="center"
         android:text="@string/splash_Phrase"
         android:textColor="#fff"
-        android:textSize="40sp"
+        android:textSize="53sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.253" />
+        app:layout_constraintVertical_bias="0.235" />
 
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="300dp"
+        android:layout_height="300sp"
         android:contentDescription="@string/intro_image"
         android:src="@drawable/lightning"
         app:layout_constraintBottom_toBottomOf="parent"

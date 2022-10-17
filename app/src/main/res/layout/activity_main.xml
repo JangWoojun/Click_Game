@@ -9,24 +9,24 @@
 
 
     <LinearLayout
-        android:layout_width="300dp"
-        android:layout_height="250dp"
+        android:layout_width="300sp"
+        android:layout_height="250sp"
         android:background="@drawable/radius_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.966" />
+        app:layout_constraintVertical_bias="0.95" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/alegreya_sc"
         android:gravity="center"
         android:text="@string/title"
         android:textColor="@color/white"
-        android:fontFamily="@font/alegreya_sc"
-        android:textSize="53sp"
+        android:textSize="63sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,8 +36,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/startBtn"
-        android:layout_width="170dp"
-        android:layout_height="70dp"
+        android:layout_width="170sp"
+        android:layout_height="70sp"
         android:textColor="#fff"
         android:text="@string/main_SolidBtn"
         android:textStyle="bold"
@@ -51,8 +51,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/rankingBtn"
-        android:layout_width="170dp"
-        android:layout_height="70dp"
+        android:layout_width="170sp"
+        android:layout_height="70sp"
         android:background="@drawable/main_ghost_btn"
         android:text="@string/main_GhostBtn"
         android:textColor="#c0102a"
