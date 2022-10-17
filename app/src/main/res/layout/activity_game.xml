@@ -72,7 +72,7 @@
         android:layout_width="170dp"
         android:layout_height="170dp"
         android:background="@drawable/radius"
-        android:text="@string/game_btnReadyState"
+        android:text="@string/Ready"
         android:textColor="@color/white"
         android:textStyle="bold"
         android:textSize="19sp"
