@@ -1,9 +1,8 @@
 package com.example.clickgame
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
 class MaxScoreActivity : AppCompatActivity() {
     private var backPressedTime : Long = 0
@@ -14,7 +13,7 @@ class MaxScoreActivity : AppCompatActivity() {
         val maxScore = intent.getStringExtra("maxScore")
 
         val maxMs = findViewById<TextView>(R.id.maxMS)
-        maxMs.text = "${maxScore}ms"
+        maxMs.text = getString(R.string.maxMs,maxScore)
 
     }
     override fun onBackPressed() {

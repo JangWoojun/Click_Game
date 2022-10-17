@@ -1,12 +1,9 @@
 package com.example.clickgame
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Layout
 import android.widget.Button
-import android.widget.Toast
-import com.google.android.material.snackbar.Snackbar
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
     private var backPressedTime : Long = 0

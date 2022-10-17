@@ -2,15 +2,13 @@ package com.example.clickgame
 
 import android.content.Intent
 import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import kotlin.concurrent.thread
 
@@ -19,10 +17,9 @@ class GameActivity : AppCompatActivity() {
     private var totalTime = 0
     private var started = false
     private var chk = false
-
-
-    val TAG = "GameActivity"
+    private var num = 0
     private var backPressedTime : Long = 0
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,7 +27,7 @@ class GameActivity : AppCompatActivity() {
 
         val clickBtn = findViewById<Button>(R.id.clickBtn)
 
-        val num = (500..5000).random()
+        num = (500..5000).random()
 
         var i = 1
 
@@ -57,7 +54,6 @@ class GameActivity : AppCompatActivity() {
                 chk =false
 
                 val num = (500..3500).random()
-                Log.d(TAG,num.toString())
 
                 Handler(Looper.getMainLooper()).postDelayed({
 
@@ -69,7 +65,7 @@ class GameActivity : AppCompatActivity() {
 
     }
 
-    fun start(){
+    private fun start(){
 
         val gameLayout = findViewById<ConstraintLayout>(R.id.gameLayout)
         val clickBtn = findViewById<Button>(R.id.clickBtn)
@@ -92,10 +88,10 @@ class GameActivity : AppCompatActivity() {
         timeCheck.visibility = View.INVISIBLE
         waitText.visibility = View.INVISIBLE
         clickText.visibility = View.VISIBLE
-        clickBtn.text = "Click"
+        clickBtn.text = getString(R.string.Click)
     }
 
-    fun stop(i:Int){
+    private fun stop(i:Int){
         val gameLayout = findViewById<ConstraintLayout>(R.id.gameLayout)
         val clickBtn = findViewById<Button>(R.id.clickBtn)
         val count = findViewById<TextView>(R.id.count)
@@ -107,9 +103,9 @@ class GameActivity : AppCompatActivity() {
         started=false
 
         gameLayout.setBackgroundColor(Color.parseColor("#c0102a"))
-        clickBtn.text = "Ready"
-        count.text = "$i/5"
-        timeCheck.text = "${time}ms"
+        clickBtn.text = getString(R.string.Ready)
+        count.text = getString(R.string.count,i)
+        timeCheck.text = getString(R.string.timeCheck,time)
         timeCheck.visibility = View.VISIBLE
         waitText.visibility = View.VISIBLE
         clickText.visibility = View.INVISIBLE
