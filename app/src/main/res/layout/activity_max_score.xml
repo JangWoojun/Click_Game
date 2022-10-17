@@ -36,4 +36,38 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.338" />
 
+    <LinearLayout
+        android:layout_width="375sp"
+        android:layout_height="150sp"
+        android:background="@drawable/radius_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.98"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/restartBtn"
+            android:layout_width="170sp"
+            android:layout_height="70sp"
+            android:layout_margin="5sp"
+            android:background="@drawable/main_solid_btn"
+            android:text="@string/Restart"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/rankingBtn"
+            android:layout_width="170sp"
+            android:layout_height="70sp"
+            android:background="@drawable/main_ghost_btn"
+            android:text="@string/main_GhostBtn"
+            android:textColor="#c0102a"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
