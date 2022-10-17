@@ -16,4 +16,7 @@
     <string name="count">%1$d/5</string>
     <string name="splash_Phrase">Test your reaction rate!</string>
     <string name="intro_image">intro_image</string>
+    <string name="Soon1">Too Soon!</string>
+    <string name="Soon2">Click to Reset</string>
+    <string name="Reset">Reset</string>
 </resources>
