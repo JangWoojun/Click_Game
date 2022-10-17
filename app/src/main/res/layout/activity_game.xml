@@ -9,12 +9,44 @@
     android:id="@+id/gameLayout">
 
     <TextView
+        android:visibility="invisible"
+        android:id="@+id/soon1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Soon1"
+        android:textColor="@color/white"
+        android:textSize="64sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.369" />
+
+
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/soon2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Soon2"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.456" />
+
+    <TextView
         android:id="@+id/clickText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/game_start_guidance"
         android:textColor="@color/white"
-        android:textSize="34sp"
+        android:textSize="54sp"
         android:textStyle="bold"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -24,12 +56,13 @@
         app:layout_constraintVertical_bias="0.389" />
 
     <TextView
+        android:gravity="center"
         android:id="@+id/waitText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/game_guidance"
         android:textColor="@color/white"
-        android:textSize="34sp"
+        android:textSize="44sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -73,6 +106,24 @@
         android:layout_height="170dp"
         android:background="@drawable/radius"
         android:text="@string/Ready"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.777" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:textAllCaps="false"
+        android:visibility="invisible"
+        android:id="@+id/resetBtn"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:background="@drawable/radius"
+        android:text="@string/Reset"
         android:textColor="@color/white"
         android:textStyle="bold"
         android:textSize="19sp"
