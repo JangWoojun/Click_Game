@@ -22,4 +22,7 @@
     <string name="Reset">Reset</string>
     <string name="Restart">Restart</string>
     <string name="Winner">The winner of this game is</string>
+    <string name="PLAYER1">PLAYER 1</string>
+    <string name="PLAYER2">PLAYER 2</string>
+    <string name="wait">Wait for this\ngame to end</string>
 </resources>

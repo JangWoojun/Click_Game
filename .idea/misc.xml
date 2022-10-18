@@ -8,7 +8,14 @@
         <entry key="app/src/main/res/drawable-v24/ic_lightning_7050271.xml" value="0.22" />
         <entry key="app/src/main/res/drawable-v24/lightning.xml" value="0.1065" />
         <entry key="app/src/main/res/drawable/border_line.xml" value="0.192" />
+        <entry key="app/src/main/res/drawable/border_line_blue_left.xml" value="0.192" />
+        <entry key="app/src/main/res/drawable/border_line_blue_right.xml" value="0.192" />
+        <entry key="app/src/main/res/drawable/border_line_green_left.xml" value="0.192" />
+        <entry key="app/src/main/res/drawable/border_line_green_right.xml" value="0.192" />
         <entry key="app/src/main/res/drawable/border_line_left.xml" value="0.192" />
+        <entry key="app/src/main/res/drawable/border_line_red_left.xml" value="0.192" />
+        <entry key="app/src/main/res/drawable/border_line_red_right.xml" value="0.192" />
+        <entry key="app/src/main/res/drawable/border_line_right.xml" value="0.192" />
         <entry key="app/src/main/res/drawable/ic_coins_3344603.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.22" />
         <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.22" />
@@ -25,7 +32,7 @@
         <entry key="app/src/main/res/layout/activity_game.xml" value="0.3019195556640625" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_max_score.xml" value="0.20646514892578127" />
-        <entry key="app/src/main/res/layout/activity_multi.xml" value="0.23004760742187494" />
+        <entry key="app/src/main/res/layout/activity_multi.xml" value="0.23444519042968745" />
         <entry key="app/src/main/res/layout/activity_multi_max_score.xml" value="0.3126449584960938" />
         <entry key="app/src/main/res/layout/activity_no.xml" value="0.17527173913043478" />
         <entry key="app/src/main/res/layout/activity_score.xml" value="0.35190217391304346" />
