@@ -11,6 +11,7 @@ import com.example.clickgame.databinding.ActivityMultiBinding
 import kotlin.concurrent.thread
 
 class MultiActivity : AppCompatActivity() {
+    private var backPressedTime : Long = 0
     private lateinit var binding: ActivityMultiBinding
 
     private val handler1 = Handler(Looper.getMainLooper())
@@ -256,6 +257,15 @@ class MultiActivity : AppCompatActivity() {
 
             }, num2.toLong())
         }
+    override fun onBackPressed() {
 
+        if (System.currentTimeMillis() - backPressedTime < 2000) {
+            finish()
+            return
+        }
+
+        backPressedTime = System.currentTimeMillis()
     }
+
+}
 

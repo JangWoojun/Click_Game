@@ -8,6 +8,8 @@ import com.example.clickgame.databinding.ActivityMultiMaxScoreBinding
 
 class MultiMaxScoreActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMultiMaxScoreBinding
+    private var backPressedTime : Long = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_multi_max_score)
@@ -40,5 +42,14 @@ class MultiMaxScoreActivity : AppCompatActivity() {
             overridePendingTransition(0, 0)
         }
 
+    }
+    override fun onBackPressed() {
+
+        if (System.currentTimeMillis() - backPressedTime < 2000) {
+            finish()
+            return
+        }
+
+        backPressedTime = System.currentTimeMillis()
     }
 }
