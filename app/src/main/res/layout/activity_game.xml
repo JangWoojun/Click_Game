@@ -75,15 +75,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/game_speedCheck"
-        android:textColor="@color/white"
-        android:textSize="54sp"
-        android:textStyle="bold"
         android:visibility="invisible"
+        android:textColor="@color/white"
+        android:textSize="70sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.24" />
+        app:layout_constraintVertical_bias="0.19" />
 
     <TextView
         android:id="@+id/count"
@@ -102,36 +101,36 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/clickBtn"
-        android:layout_width="170sp"
-        android:layout_height="170sp"
+        android:layout_width="220sp"
+        android:layout_height="220sp"
         android:background="@drawable/radius"
         android:text="@string/Ready"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:textSize="19sp"
+        android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.777" />
+        app:layout_constraintVertical_bias="0.87" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:textAllCaps="false"
         android:visibility="invisible"
         android:id="@+id/resetBtn"
-        android:layout_width="170sp"
-        android:layout_height="170sp"
+        android:layout_width="220sp"
+        android:layout_height="220sp"
         android:background="@drawable/radius"
         android:text="@string/Reset"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:textSize="19sp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.777" />
+        app:layout_constraintVertical_bias="0.87" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
