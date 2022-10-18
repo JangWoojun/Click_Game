@@ -21,6 +21,15 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             overridePendingTransition(0, 0)
         }
+
+        val multiBtn = findViewById<Button>(R.id.multiBtn)
+        multiBtn.setOnClickListener {
+            val intent = Intent(this,MultiActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(intent)
+            overridePendingTransition(0, 0)
+        }
     }
     override fun onBackPressed() {
 
