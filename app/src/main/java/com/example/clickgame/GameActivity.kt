@@ -6,10 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.View
-import android.widget.Button
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.clickgame.databinding.ActivityGameBinding
 import kotlin.concurrent.thread
 
@@ -55,7 +52,7 @@ class GameActivity : AppCompatActivity() {
                 stop(i)
                 i++
                 chk =false
-                val num = (3000..5000).random()
+                num = (3000..5000).random()
                 handler.postDelayed({
 
                     start()
@@ -71,7 +68,7 @@ class GameActivity : AppCompatActivity() {
                 binding.clickText.visibility = View.INVISIBLE
                 binding.clickBtn.visibility = View.INVISIBLE
 
-                handler.removeCallbacksAndMessages(null);
+                handler.removeCallbacksAndMessages(null)
                 time = 0
                 totalTime = 0
                 i = 0
