@@ -20,9 +20,11 @@ class MultiMaxScoreActivity : AppCompatActivity() {
         val maxScore2 = intent.getStringExtra("maxScore2")!!.toInt()
 
         if (maxScore1<maxScore2){
+            binding.winner.text = getString(R.string.PLAYER1)
             binding.maxMS.text = getString(R.string.maxMs,maxScore1.toString())
         }
         else {
+            binding.winner.text = getString(R.string.PLAYER2)
             binding.maxMS.text = getString(R.string.maxMs,maxScore2.toString())
         }
 
