@@ -3,7 +3,6 @@ package com.example.clickgame
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.clickgame.databinding.ActivityMaxScoreBinding
 import com.example.clickgame.databinding.ActivityMultiMaxScoreBinding
 
 class MultiMaxScoreActivity : AppCompatActivity() {
