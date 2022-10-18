@@ -33,7 +33,7 @@ class MultiMaxScoreActivity : AppCompatActivity() {
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
-            overridePendingTransition(0, 0)
+            overridePendingTransition(R.anim.vertical_enter, R.anim.none)
         }
 
         binding.homeBtn.setOnClickListener {
@@ -41,7 +41,7 @@ class MultiMaxScoreActivity : AppCompatActivity() {
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
-            overridePendingTransition(0, 0)
+            overridePendingTransition(R.anim.vertical_enter, R.anim.none)
         }
 
     }
