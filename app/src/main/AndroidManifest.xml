@@ -14,6 +14,10 @@
         android:theme="@style/Theme.ClickGame"
         tools:targetApi="31">
         <activity
+            android:screenOrientation="landscape"
+            android:name=".MultiActivity"
+            android:exported="false" />
+        <activity
             android:name=".MaxScoreActivity"
             android:exported="false" />
         <activity
