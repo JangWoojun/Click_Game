@@ -10,6 +10,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
+import com.example.clickgame.databinding.ActivityGameBinding
 import kotlin.concurrent.thread
 
 class GameActivity : AppCompatActivity() {
@@ -19,6 +20,7 @@ class GameActivity : AppCompatActivity() {
     private var chk = false
     private var num = 0
     private var backPressedTime : Long = 0
+    private lateinit var binding:ActivityGameBinding
 
     private var i = 1
 
@@ -28,16 +30,8 @@ class GameActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
-
-        val clickBtn = findViewById<Button>(R.id.clickBtn)
-        val gameLayout = findViewById<ConstraintLayout>(R.id.gameLayout)
-        val count = findViewById<TextView>(R.id.count)
-        val resetBtn = findViewById<Button>(R.id.resetBtn)
-        val soon1 = findViewById<TextView>(R.id.soon1)
-        val soon2 = findViewById<TextView>(R.id.soon2)
-        val timeCheck = findViewById<TextView>(R.id.timeCheck)
-        val waitText = findViewById<TextView>(R.id.waitText)
-        val clickText = findViewById<TextView>(R.id.clickText)
+        binding = ActivityGameBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         num = (2000..4000).random()
 
@@ -47,7 +41,7 @@ class GameActivity : AppCompatActivity() {
 
         }, num.toLong())
 
-        clickBtn.setOnClickListener {
+        binding.clickBtn.setOnClickListener {
             if (chk){
                 if(i==5){
                     val intent = Intent(this,MaxScoreActivity::class.java)
@@ -58,14 +52,10 @@ class GameActivity : AppCompatActivity() {
                     startActivity(intent)
                     overridePendingTransition(0, 0)
                 }
-
                 stop(i)
                 i++
-
                 chk =false
-
                 val num = (3000..5000).random()
-
                 handler.postDelayed({
 
                     start()
@@ -73,22 +63,22 @@ class GameActivity : AppCompatActivity() {
                 }, num.toLong())
             }
             else {
-                resetBtn.visibility = View.VISIBLE
-                soon1.visibility = View.VISIBLE
-                soon2.visibility = View.VISIBLE
-                timeCheck.visibility = View.INVISIBLE
-                waitText.visibility = View.INVISIBLE
-                clickText.visibility = View.INVISIBLE
-                clickBtn.visibility = View.INVISIBLE
+                binding.resetBtn.visibility = View.VISIBLE
+                binding.soon1.visibility = View.VISIBLE
+                binding.soon2.visibility = View.VISIBLE
+                binding.timeCheck.visibility = View.INVISIBLE
+                binding.waitText.visibility = View.INVISIBLE
+                binding.clickText.visibility = View.INVISIBLE
+                binding.clickBtn.visibility = View.INVISIBLE
 
                 handler.removeCallbacksAndMessages(null);
                 time = 0
                 totalTime = 0
                 i = 0
-                gameLayout.setBackgroundColor(Color.parseColor("#a9cbd7"))
-                count.text = getString(R.string.count,i)
+                binding.gameLayout.setBackgroundColor(Color.parseColor("#a9cbd7"))
+                binding.count.text = getString(R.string.count,i)
 
-                resetBtn.setOnClickListener {
+                binding.resetBtn.setOnClickListener {
                     reset()
                     i++
                 }
@@ -99,24 +89,15 @@ class GameActivity : AppCompatActivity() {
 
     private fun start(){
 
-        val gameLayout = findViewById<ConstraintLayout>(R.id.gameLayout)
-        val clickBtn = findViewById<Button>(R.id.clickBtn)
-        val timeCheck = findViewById<TextView>(R.id.timeCheck)
-        val waitText = findViewById<TextView>(R.id.waitText)
-        val clickText = findViewById<TextView>(R.id.clickText)
-        val resetBtn = findViewById<Button>(R.id.resetBtn)
-        val soon1 = findViewById<TextView>(R.id.soon1)
-        val soon2 = findViewById<TextView>(R.id.soon2)
-
-        soon1.visibility = View.INVISIBLE
-        soon2.visibility = View.INVISIBLE
-        resetBtn.visibility = View.INVISIBLE
-        gameLayout.setBackgroundColor(Color.parseColor("#2dd12d"))
-        timeCheck.visibility = View.INVISIBLE
-        waitText.visibility = View.INVISIBLE
-        clickText.visibility = View.VISIBLE
-        clickBtn.text = getString(R.string.Click)
-        clickBtn.visibility = View.VISIBLE
+        binding.soon1.visibility = View.INVISIBLE
+        binding.soon2.visibility = View.INVISIBLE
+        binding.resetBtn.visibility = View.INVISIBLE
+        binding.gameLayout.setBackgroundColor(Color.parseColor("#2dd12d"))
+        binding.timeCheck.visibility = View.INVISIBLE
+        binding.waitText.visibility = View.INVISIBLE
+        binding.clickText.visibility = View.VISIBLE
+        binding.clickBtn.text = getString(R.string.Click)
+        binding.clickBtn.visibility = View.VISIBLE
 
         chk = true
         started = true
@@ -133,42 +114,30 @@ class GameActivity : AppCompatActivity() {
     }
 
     private fun stop(i:Int){
-        val gameLayout = findViewById<ConstraintLayout>(R.id.gameLayout)
-        val clickBtn = findViewById<Button>(R.id.clickBtn)
-        val count = findViewById<TextView>(R.id.count)
-        val timeCheck = findViewById<TextView>(R.id.timeCheck)
-        val waitText = findViewById<TextView>(R.id.waitText)
-        val clickText = findViewById<TextView>(R.id.clickText)
-
 
         started=false
 
-        gameLayout.setBackgroundColor(Color.parseColor("#c0102a"))
-        clickBtn.text = getString(R.string.Ready)
-        count.text = getString(R.string.count,i)
-        timeCheck.text = getString(R.string.timeCheck,time)
-        timeCheck.visibility = View.VISIBLE
-        waitText.visibility = View.VISIBLE
-        clickText.visibility = View.INVISIBLE
-        waitText.text = getString(R.string.game_guidance)
+        binding.gameLayout.setBackgroundColor(Color.parseColor("#c0102a"))
+        binding.clickBtn.text = getString(R.string.Ready)
+        binding.count.text = getString(R.string.count,i)
+        binding.timeCheck.text = getString(R.string.timeCheck,time)
+        binding.timeCheck.visibility = View.VISIBLE
+        binding.waitText.visibility = View.VISIBLE
+        binding.clickText.visibility = View.INVISIBLE
+        binding.waitText.text = getString(R.string.game_guidance)
+
         totalTime+=time
         time=0
     }
     private fun reset(){
-        val gameLayout = findViewById<ConstraintLayout>(R.id.gameLayout)
-        val clickBtn = findViewById<Button>(R.id.clickBtn)
-        val waitText = findViewById<TextView>(R.id.waitText)
-        val resetBtn = findViewById<Button>(R.id.resetBtn)
-        val soon1 = findViewById<TextView>(R.id.soon1)
-        val soon2 = findViewById<TextView>(R.id.soon2)
 
-        resetBtn.visibility = View.INVISIBLE
-        soon1.visibility = View.INVISIBLE
-        soon2.visibility = View.INVISIBLE
-        clickBtn.visibility = View.VISIBLE
-        waitText.visibility = View.VISIBLE
+        binding.resetBtn.visibility = View.INVISIBLE
+        binding.soon1.visibility = View.INVISIBLE
+        binding.soon2.visibility = View.INVISIBLE
+        binding.clickBtn.visibility = View.VISIBLE
+        binding.waitText.visibility = View.VISIBLE
 
-        gameLayout.setBackgroundColor(Color.parseColor("#c0102a"))
+        binding.gameLayout.setBackgroundColor(Color.parseColor("#c0102a"))
         time = 0
         totalTime = 0
         i = 0
