@@ -19,7 +19,7 @@ class GameActivity : AppCompatActivity() {
     private var backPressedTime : Long = 0
     private lateinit var binding:ActivityGameBinding
 
-    private var i = 1
+    private var i = 0
 
     private val handler = Handler(Looper.getMainLooper())
 
@@ -47,10 +47,10 @@ class GameActivity : AppCompatActivity() {
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                     startActivity(intent)
-                    overridePendingTransition(0, 0)
+                    overridePendingTransition(R.anim.vertical_enter, R.anim.none)
                 }
-                stop(i)
                 i++
+                stop(i)
                 chk =false
                 num = (3000..5000).random()
                 handler.postDelayed({
