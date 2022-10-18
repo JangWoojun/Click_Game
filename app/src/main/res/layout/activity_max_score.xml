@@ -60,11 +60,11 @@
             android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/rankingBtn"
+            android:id="@+id/homeBtn"
             android:layout_width="170sp"
             android:layout_height="70sp"
             android:background="@drawable/main_ghost_btn"
-            android:text="@string/main_GhostBtn"
+            android:text="@string/home"
             android:textColor="#c0102a"
             android:textStyle="bold" />
     </LinearLayout>
