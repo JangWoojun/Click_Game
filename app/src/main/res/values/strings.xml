@@ -21,4 +21,5 @@
     <string name="Soon2">Click to Reset</string>
     <string name="Reset">Reset</string>
     <string name="Restart">Restart</string>
+    <string name="Winner">The winner of this game is</string>
 </resources>
