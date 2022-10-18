@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Click Game</string>
+    <string name="app_name">Speed test</string>
     <string name="title">reaction\nspeed test</string>
     <string name="main_SolidBtn">single play</string>
     <string name="main_GhostBtn">multi play</string>
