@@ -8,6 +8,7 @@
     tools:context=".MultiActivity">
 
     <LinearLayout
+        android:background="@drawable/border_line_right"
         android:layout_weight="1"
         android:layout_width="wrap_content"
         android:layout_height="match_parent">
@@ -16,8 +17,69 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <TextView
+                android:visibility="invisible"
+                android:id="@+id/clickText1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/game_start_guidance"
+                android:textColor="@color/white"
+                android:textSize="44sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.35" />
 
             <TextView
+                android:gravity="center"
+                android:id="@+id/waitText1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/game_guidance"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.35" />
+
+            <TextView
+                android:visibility="invisible"
+                android:id="@+id/timeCheck1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/game_speedCheck"
+                android:textColor="@color/white"
+                android:textSize="38sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.13" />
+
+
+            <TextView
+                android:id="@+id/count1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/game_count"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.95"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.04" />
+
+            <TextView
+                android:visibility="invisible"
                 android:id="@+id/player1soon1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -33,6 +95,7 @@
                 app:layout_constraintVertical_bias="0.14" />
 
             <TextView
+                android:visibility="invisible"
                 android:id="@+id/player1soon2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -46,12 +109,47 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.32" />
 
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/clickBtn1"
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                android:background="@drawable/radius"
+                android:text="@string/Ready"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="19sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.9" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:textAllCaps="false"
+                android:visibility="invisible"
+                android:id="@+id/resetBtn1"
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                android:background="@drawable/radius"
+                android:text="@string/Reset"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="19sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.9" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 
     <LinearLayout
+        android:background="@drawable/border_line_left"
         android:layout_weight="1"
         android:layout_width="wrap_content"
         android:layout_height="match_parent">
@@ -60,8 +158,71 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <TextView
+                android:visibility="invisible"
+                android:id="@+id/clickText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/game_start_guidance"
+                android:textColor="@color/white"
+                android:textSize="44sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.35" />
 
             <TextView
+                android:gravity="center"
+                android:id="@+id/waitText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/game_guidance"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.35" />
+
+            <TextView
+                android:visibility="invisible"
+                android:id="@+id/timeCheck2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/game_speedCheck"
+                android:textColor="@color/white"
+                android:textSize="38sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.13" />
+
+
+
+            <TextView
+                android:id="@+id/count2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/game_count"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.95"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.04" />
+
+
+            <TextView
+                android:visibility="invisible"
                 android:id="@+id/player2soon1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -77,6 +238,8 @@
                 app:layout_constraintVertical_bias="0.14" />
 
             <TextView
+                android:visibility="invisible"
+
                 android:id="@+id/player2soon2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -89,6 +252,40 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.32" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/clickBtn2"
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                android:background="@drawable/radius"
+                android:text="@string/Ready"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="19sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.9" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:textAllCaps="false"
+                android:visibility="invisible"
+                android:id="@+id/resetBtn2"
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                android:background="@drawable/radius"
+                android:text="@string/Reset"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="19sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.9" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
