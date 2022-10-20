@@ -4,6 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.clickgame.databinding.ActivityMaxScoreBinding
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 
 class MaxScoreActivity : AppCompatActivity() {
     private var backPressedTime : Long = 0
@@ -13,6 +16,12 @@ class MaxScoreActivity : AppCompatActivity() {
         setContentView(R.layout.activity_max_score)
         binding = ActivityMaxScoreBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        MobileAds.initialize(this) {}
+
+        val mAdView = findViewById<AdView>(R.id.banner)
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
 
         val maxScore = intent.getStringExtra("maxScore")
 
