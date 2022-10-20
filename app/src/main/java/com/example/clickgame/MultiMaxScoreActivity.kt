@@ -4,6 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.clickgame.databinding.ActivityMultiMaxScoreBinding
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 
 class MultiMaxScoreActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMultiMaxScoreBinding
@@ -14,6 +17,12 @@ class MultiMaxScoreActivity : AppCompatActivity() {
         setContentView(R.layout.activity_multi_max_score)
         binding = ActivityMultiMaxScoreBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        MobileAds.initialize(this) {}
+
+        val mAdView = findViewById<AdView>(R.id.banner)
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
 
         val maxScore1 = intent.getStringExtra("maxScore1")!!.toInt()
         val maxScore2 = intent.getStringExtra("maxScore2")!!.toInt()
