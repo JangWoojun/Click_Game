@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">반응 속도 테스트</string>
+    <string name="title">반응 속도 테스트</string>
+    <string name="main_SolidBtn">싱글 플레이</string>
+    <string name="main_GhostBtn">2인 플레이</string>
+    <string name="home">홈으로</string>
+    <string name="maxScore_ScoreGuidance">당신의 반응 속도는</string>
+    <string name="exScore">000ms</string>
+    <string name="Ready">준비</string>
+    <string name="game_count">0/5</string>
+    <string name="game_speedCheck">000ms</string>
+    <string name="game_guidance">초록색을 기다리세요</string>
+    <string name="game_start_guidance">클릭!</string>
+    <string name="Click">클릭</string>
+    <string name="timeCheck">%1$dms</string>
+    <string name="maxMs">%1$sms</string>
+    <string name="count">%1$d/5</string>
+    <string name="splash_Phrase">당신의 반응 속도를 테스트하세요!</string>
+    <string name="intro_image">intro_image</string>
+    <string name="Soon1">너무 빨라요!</string>
+    <string name="Soon2">다시 하려면 클릭하세요</string>
+    <string name="Reset">Reset</string>
+    <string name="Restart">다시 시작</string>
+    <string name="Winner">이 게임의 승자는 바로!</string>
+    <string name="PLAYER1">PLAYER 1</string>
+    <string name="PLAYER2">PLAYER 2</string>
+    <string name="wait">게임이 끝날 때까지 기다리세요</string>
+    <string name="banner">ca-app-pub-3126191506794881/1164279642</string>
+</resources>
