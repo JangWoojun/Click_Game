@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#c0102a"
-    tools:context=".MultiActivity">
+    tools:context="com.speedtest.clickgame.MultiActivity">
 
     <LinearLayout
         android:id="@+id/gameLayout1"

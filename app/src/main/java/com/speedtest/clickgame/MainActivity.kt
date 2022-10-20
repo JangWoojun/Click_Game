@@ -3,10 +3,10 @@ package com.speedtest.clickgame
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.speedtest.clickgame.databinding.ActivityMainBinding
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
+import com.speedtest.clickgame.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private var backPressedTime : Long = 0
