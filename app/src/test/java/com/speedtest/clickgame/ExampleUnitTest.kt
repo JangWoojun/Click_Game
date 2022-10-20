@@ -1,4 +1,4 @@
-package com.example.clickgame
+package com.speedtest.clickgame
 
 import org.junit.Test
 

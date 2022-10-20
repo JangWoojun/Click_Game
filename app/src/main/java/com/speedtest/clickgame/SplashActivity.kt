@@ -1,4 +1,4 @@
-package com.example.clickgame
+package com.speedtest.clickgame
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

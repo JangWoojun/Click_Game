@@ -1,4 +1,4 @@
-package com.example.clickgame
+package com.speedtest.clickgame
 
 import android.content.Intent
 import android.graphics.Color
@@ -7,7 +7,7 @@ import android.os.Handler
 import android.os.Looper
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.example.clickgame.databinding.ActivityGameBinding
+import com.speedtest.clickgame.databinding.ActivityGameBinding
 import kotlin.concurrent.thread
 
 class GameActivity : AppCompatActivity() {

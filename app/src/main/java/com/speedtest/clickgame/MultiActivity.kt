@@ -1,4 +1,4 @@
-package com.example.clickgame
+package com.speedtest.clickgame
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.View
-import com.example.clickgame.databinding.ActivityMultiBinding
+import com.speedtest.clickgame.databinding.ActivityMultiBinding
 import kotlin.concurrent.thread
 
 class MultiActivity : AppCompatActivity() {
