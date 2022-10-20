@@ -16,7 +16,7 @@
     <string name="timeCheck">%1$dms</string>
     <string name="maxMs">%1$sms</string>
     <string name="count">%1$d/5</string>
-    <string name="splash_Phrase">당신의 반응 속도를 테스트하세요!</string>
+    <string name="splash_Phrase">당신의 반응 속도를\n테스트하세요!</string>
     <string name="intro_image">intro_image</string>
     <string name="Soon1">너무 빨라요!</string>
     <string name="Soon2">다시 하려면 클릭하세요</string>
