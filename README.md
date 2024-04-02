@@ -1,4 +1,4 @@
-# SPEED_TEST
+# SPEED_TEST
 > 반응속도 테스트 앱
 <img width="1330" alt="스크린샷 2022-11-05 오후 10 26 05" src="https://user-images.githubusercontent.com/102157871/200122241-9a1bae2d-12e4-4a55-a036-e48723ce05aa.png">
 
